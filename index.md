@@ -8,8 +8,12 @@
 ## 专业技术
 
 - 熟练使用`c/c++`,`java`,`python`等主流开发开发语言
+
 - 熟练使用`qt,pyqt`等`GUI`开发工具
-- 熟练使用`Springboot,mysql,bootstrap,vue，Django`等进行网页开发
+
+- 熟练使用`Springboot,bootstrap,vue，Django`等进行网页开发
+
+- 熟练使用数据库：`mysql`
 
 
 ## 开发项目经历
