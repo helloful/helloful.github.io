@@ -32,13 +32,13 @@
 	</head>
 	<body>
 		<!--start top-->
-		<div class="top">
+		<div class="top" onclick="play()">
 			<marquee behavior="scroll">灵宝，时光不老，我们不散</marquee>
 		
 		</div>
 		<!--end top-->
 		<!--start box-->
-		<div class="box">
+		<div class="box" onclick="play()">
 			<div class="pic">
 				<ul>
 					<li><img src="images/11.jpg" width="200" height="200" alt=""/></li>
@@ -53,19 +53,22 @@
 		</div>
 		<!--end box-->
 		<!--start text-->
-		<div id="text" style="color: #fff;font-size:30px;font-family:华文行楷;margin-top: 30px;"></div>
+		<div id="text" style="color: #fff;font-size:30px;font-family:华文行楷;margin-top: 30px;" onclick="play()"></div>
 		<!--end text-->
 		<!-- <embed src="music.mp3" hidden="true" loop="-1" width="0" height="0"/>
 		<embed src="music.ogg" hidden="true" loop="-1" width="0" height="0"/>
 		<embed src="music.wav" hidden="true" loop="-1" width="0" height="0"/> -->
 		
-		<audio src="music.mp3" loop="loop" id="music"  controls></audio>
+		<audio src="music.mp3" loop="loop" id="music" hidden controls></audio>
         <script src="js/jquery.js"></script>
 		<!--雪花-->
 		<script src="js/snow.js"></script>
 		<script>
-			let audio = document.getElementById("music");
-			audio.play();
+			function play(params) {
+				let audio = document.getElementById("music");
+				audio.play();
+				
+			}
 			$(".pic ul li").each(function(i){//遍历
 				var deg=360/$(".pic ul li").size();//size个数
 				//当前的li对象 添加css样式
