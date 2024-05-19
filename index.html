@@ -36,24 +36,25 @@
 			<marquee behavior="scroll">老婆，一缕烟火，两抹红尘，三生有幸，遇见你。</marquee>
 		
 		</div>
+		<button >下一页</button>
 		<audio src="gushi.mp3" loop="loop" id="music" hidden autoplay></audio>
 		<!--end top-->
 		<!--start box-->
 		<div class="box" onclick="play()">
 			<div class="pic">
 				<ul>
-					<li><img src="2024/1.jpg" width="200" height="200" alt=""/></li>
-					<li><img src="2024/2.jpg" width="200" height="200" alt=""/></li>
-					<li><img src="2024/3.jpg" width="200" height="200" alt=""/></li>
-					<li><img src="2024/4.jpg" width="200" height="200" alt="" /></li>
-					<li><img src="2024/5.jpg" width="200" height="200" alt="" /></li>
-					<li><img src="2024/6.jpg" width="200" height="200" alt="" /></li>
-					<li><img src="2024/7.jpg" width="200" height="200" alt="" /></li>
-					<li><img src="2024/8.jpg" width="200" height="200" alt="" /></li>
-					<li><img src="2024/9.jpg" width="200" height="200" alt="" /></li>
-					<li><img src="2024/10.jpg" width="200" height="200" alt="" /></li>
-					<li><img src="2024/11.jpg" width="200" height="200" alt="" /></li>
-					<li><img src="2024/12.jpg" width="200" height="200" alt="" /></li>
+					<li><img src="2024/1.jpg" width="160" height="200" alt=""/></li>
+					<li><img src="2024/2.jpg" width="160" height="200" alt=""/></li>
+					<li><img src="2024/3.jpg" width="160" height="200" alt=""/></li>
+					<li><img src="2024/4.jpg" width="160" height="200" alt="" /></li>
+					<li><img src="2024/5.jpg" width="160" height="200" alt="" /></li>
+					<li><img src="2024/6.jpg" width="160" height="200" alt="" /></li>
+					<li><img src="2024/7.jpg" width="160" height="200" alt="" /></li>
+					<li><img src="2024/8.jpg" width="160" height="200" alt="" /></li>
+					<li><img src="2024/9.jpg" width="160" height="200" alt="" /></li>
+					<li><img src="2024/10.jpg" width="160" height="200" alt="" /></li>
+					<li><img src="2024/11.jpg" width="160" height="200" alt="" /></li>
+					<li><img src="2024/12.jpg" width="160" height="200" alt="" /></li>
 				</ul>
 			</div>
 		</div>
@@ -75,10 +76,12 @@
 				audio.play();
 				
 			}
+			var idx=0
 			$(".pic ul li").each(function(i){//遍历
-				var deg=1000/$(".pic ul li").size();//size个数
+				var deg=360/$(".pic ul li").size();//size个数
 				//当前的li对象 添加css样式
-				$(this).css({"transform":"rotateY("+deg*i+"deg) translateZ(216px)"});
+		
+				$(this).css({"transform":"rotateY("+deg*i+"deg) translateZ(300px)"});
 				
 				$.fn.snow({
 					minSize:0,
@@ -86,6 +89,7 @@
 					newOn:500,
 					flakeColor:"#ffffff"
 				});
+				
 			});
 			var i=0;
 			var str="走过千山万水，才懂得家最温馨;历经风风雨雨，才感悟平淡最真;错过许许多多，才知道珍惜拥有;路过熙熙攘攘，才明白你最珍贵。人间烟火，山河远阔。无一是你，无一不是你。";
