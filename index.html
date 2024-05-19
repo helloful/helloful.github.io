@@ -7,13 +7,13 @@
 		<title>520</title>
 		<style>
 			*{margin:0;padding:0;}
-			body{background:url("images/11.jpg");background-size:cover;}
+			 body{background:url("2024/3.jpg") ;background-size:cover;}
 			/*start top*/
 			.top{width:400px;height:100px;margin:60px auto;font-size:30px;font-family:"华文行楷";color:#fff;}
 			/*end top*/
 			/*start box*/
-			.box{width:310px;height:310px;margin:auto;perspective:800px;/*景深*/}
-			.box .pic{position:relative;transform-style:preserve-3d;/*3d环境*/ animation:play 10s linear infinite;/*动画名称 执行时间 匀速 无限执行*/}
+			.box{width:410px;height:410px;margin:auto;perspective:800px;/*景深*/}
+			.box .pic{gap:10px;position:relative;transform-style:preserve-3d;/*3d环境*/ animation:play 10s linear infinite;/*动画名称 执行时间 匀速 无限执行*/}
 			.text{font-size:30px;font-family:"华文行楷";color:#fff}
 			.box ul li{list-style:none;position:absolute;top:0;left:0;}
 			/*start box*/
@@ -33,21 +33,29 @@
 	<body>
 		<!--start top-->
 		<div class="top" onclick="play()">
-			<marquee behavior="scroll">灵宝，时光不老，我们不散</marquee>
+			<marquee behavior="scroll">老婆，一缕烟火，两抹红尘，三生有幸，遇见你。</marquee>
 		
 		</div>
+		<audio src="gushi.mp3" loop="loop" id="music" hidden autoplay></audio>
 		<!--end top-->
 		<!--start box-->
 		<div class="box" onclick="play()">
 			<div class="pic">
 				<ul>
-					<li><img src="images/11.jpg" width="200" height="200" alt=""/></li>
-					<li><img src="images/22.jpg" width="200" height="200" alt=""/></li>
-					<li><img src="images/33.jpg" width="200" height="200" alt=""/></li>
-					<li><img src="images/44.jpg" width="200" height="200" alt=""/></li>
-					<li><img src="images/55.jpg" width="200" height="200" alt=""/></li>
-					<li><img src="images/66.jpg" width="200" height="200" alt="" /></li>
-					
+					<li><img src="2024/1.jpg" width="200" height="200" alt=""/></li>
+					<li><img src="2024/2.jpg" width="200" height="200" alt=""/></li>
+					<li><img src="2024/3.jpg" width="200" height="200" alt=""/></li>
+					<li><img src="2024/4.jpg" width="200" height="200" alt="" /></li>
+					<li><img src="2024/5.jpg" width="200" height="200" alt="" /></li>
+					<li><img src="2024/6.jpg" width="200" height="200" alt="" /></li>
+					<li><img src="2024/7.jpg" width="200" height="200" alt="" /></li>
+					<li><img src="2024/8.jpg" width="200" height="200" alt="" /></li>
+					<li><img src="2024/9.jpg" width="200" height="200" alt="" /></li>
+					<li><img src="2024/10.jpg" width="200" height="200" alt="" /></li>
+					<li><img src="2024/11.jpg" width="200" height="200" alt="" /></li>
+					<li><img src="2024/12.jpg" width="200" height="200" alt="" /></li>
+
+				
 				</ul>
 			</div>
 		</div>
@@ -59,7 +67,7 @@
 		<embed src="music.ogg" hidden="true" loop="-1" width="0" height="0"/>
 		<embed src="music.wav" hidden="true" loop="-1" width="0" height="0"/> -->
 		
-		<audio src="music.mp3" loop="loop" id="music" hidden controls></audio>
+		<audio src="gushi.mp3" loop="loop" id="music" hidden controls></audio>
         <script src="js/jquery.js"></script>
 		<!--雪花-->
 		<script src="js/snow.js"></script>
@@ -70,19 +78,19 @@
 				
 			}
 			$(".pic ul li").each(function(i){//遍历
-				var deg=360/$(".pic ul li").size();//size个数
+				var deg=720/$(".pic ul li").size();//size个数
 				//当前的li对象 添加css样式
 				$(this).css({"transform":"rotateY("+deg*i+"deg) translateZ(216px)"});
 				
 				$.fn.snow({
-					minSize:10,
-					maxSize:15,
+					minSize:0,
+					maxSize:0,
 					newOn:500,
 					flakeColor:"#ffffff"
 				});
 			});
 			var i=0;
-			var str="能够遇见你是我最大的幸运，有了你生活变得丰富多彩，有了你，世界变得如此迷人；你是我的世界，我的世界是你，对我来说，不是在最美好的时光遇见了你，而是遇见你后都是最美好的时光！";
+			var str="走过千山万水，才懂得家最温馨;历经风风雨雨，才感悟平淡最真;错过许许多多，才知道珍惜拥有;路过熙熙攘攘，才明白你最珍贵。人间烟火，山河远阔。无一是你，无一不是你。";
 			
 			window.onload=function typing(){
 				//获取div
